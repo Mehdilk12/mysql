@@ -1,0 +1,4 @@
+SELECT CONCAT(Master.nameFirst, ' ', Master.namelast) AS "Nom complet du lanceur", Pitching.G, Pitching.W, Pitching.SV, (Pitching.w + Pitching.SV) AS "W + SV", Pitching.L, Pitching.SO, Pitching.H, Pitching.BB, Pitching.IPouts, Salaries.salary AS "Salaire du lanceur"
+FROM ((Salaries INNER JOIN Master ON Salaries.playerID=Master.playerID) INNER JOIN Pitching ON Salaries.PlayerID=Pitching.PlayerID)
+WHERE (Pitching.teamID="mon") AND (Salaries.teamID="mon") AND (Pitching.GS=0) AND (Salaries.yearID=1996) AND (Pitching.yearID=1996)
+ORDER BY (Pitching.w + Pitching.SV) DESC;

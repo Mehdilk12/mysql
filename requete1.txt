@@ -1,0 +1,4 @@
+SELECT nameLast AS Nom, nameFirst AS Prenom, teamID AS TEAM, salary AS Salaire
+FROM Master, Salaries 
+WHERE Master.playerID = Salaries.playerID AND yearID = 2013 
+AND salary = (SELECT MAX(salary) FROM Salaries WHERE yearID = 2013);

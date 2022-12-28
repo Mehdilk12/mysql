@@ -1,0 +1,28 @@
+* { 
+    box-sizing: border-box; 
+    font-family: sans-serif;
+    background-color: #66ffcc;
+    text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+input {
+	margin: 5px;
+	width: 30%
+}
+
+table {
+	margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px
+}

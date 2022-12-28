@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>exercice1</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="exercice1.css">  
+    <script src="exercice1.js"></script>
+
+</head>
+<body>
+
+	<h1>Exercice 1</h1>
+	<form>
+		<input type = "number" name="date" id="date" min="1985" max="2013" placeholder="Année (1985-2013)">
+		<input type = "button" onclick = "requete(getElementById('date').value)" value = "Lancer">
+	</form>
+
+	<h3 id="texte"> Donne le joueur le mieux payé en fonction de l'année</h3>
+    <table id="table"></table>
+
+    <p id="names"></p>
+</body>
+</html>
